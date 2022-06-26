@@ -36,6 +36,7 @@ function App() {
           {residents.map((item, idx) => (
               <div key={item}>{item}: {rooms[(idx + weekNumber) % residents.length]}</div>
           ))}
+          
       </header>
     </div>
   );
