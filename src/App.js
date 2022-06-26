@@ -5,15 +5,13 @@ const residents = [
     'Бека',
     'Ерба',
     'Айдос',
-    'Райым',
 ]
 
 const rooms = [
     'Зал + балкон',
-    'Комната Айдоса и Райыма + балкон',
+    '2 Комнаты + балкон + Прихожая',
     'Ванна + туалет',
     'Кухня',
-    'Команата Асы и Беки + Прихожая',
 ]
 
 Date.prototype.getWeek = function() {
@@ -33,10 +31,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Добрый день сучки! Вот таблица уборки!</h1>
+        <h1>Добрый день, сучки! Вот таблица уборки!</h1>
 
           {residents.map((item, idx) => (
-              <div key={item}>{item}: {rooms[(idx + weekNumber) % 5]}</div>
+              <div key={item}>{item}: {rooms[(idx + weekNumber) % residents.length]}</div>
           ))}
       </header>
     </div>
